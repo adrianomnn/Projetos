@@ -32,6 +32,7 @@ class Cifra_de_Cesar:
                 return self.caracteres[posicao-chave]
         else:
             return self.caracter
+        
     #método para criptografar um arquivo .txt    
     def criptografar_arquivo (self, nome_arquivo = '', chave = 0):
         self.nome_arquivo = nome_arquivo
@@ -97,7 +98,6 @@ class Cifra_de_Cesar:
                 print('Este arquivo não existe!')
                 break
                
-        
     #método para criptografar um arquivo texto e sobrescrevê-lo, agora, criptografado
     def criptografar_sobrescrever_arquivo (self, nome_arquivo = '', chave = 0):
         self.nome_arquivo = nome_arquivo
