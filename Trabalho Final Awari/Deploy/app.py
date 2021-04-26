@@ -1,4 +1,15 @@
+from flask import Flask, render_template, request
+import pickle
+import pandas as pd
+import numpy as np
+
+
 app = Flask(__name__)
+
+model = pickle.load(open('randomforest_classifier.pkl', 'rb'))
+
+standard_scaler = pickle.load(open('sc.pkl', 'rb'))
+
 
 def prepare_data(genero, aposentado, casado, dependente, tenure, servico_telefone, multlinhas, servico_internet, seguro_online, backup_online, protecao_celular, suporte_tecnico, streamtv, streammovies, contract, paperless, payment, monthly, total):
 
